@@ -5,52 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Página con Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet"> <!-- Enlace a la hoja de estilos externa -->
-</head>
+    <link href="styles.css" rel="stylesheet">
 <body>
-
-    <!-- Barra de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">LOREM IPSUM</a>
-            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <a class="navbar-brand fw-bold" href="#">LOREM IPSUM</a>
+    
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+    
             <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- Barra de búsqueda solo visible en pantallas grandes (a la izquierda) -->
-                <form class="d-none d-md-flex ms-auto">
-                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                </form>
-                
-                <!-- Botones de navegación: solo visibles en pantallas grandes -->
-                <ul class="navbar-nav d-none d-md-flex">
+                <ul class="navbar-nav me-auto d-lg-flex">
                     <li class="nav-item"><a class="nav-link active" href="#">Dolor</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Sit</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Amet</a></li>
                 </ul>
-                
-                <!-- Menú desplegable con opciones, que se activa en pantallas pequeñas -->
-                <div class="dropdown d-md-none">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                        Opciones
-                    </button>
-                    <ul class="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
-                        <!-- Barra de búsqueda dentro del menú desplegable (solo en pantallas pequeñas) -->
-                        <li>
-                            <form class="px-3 py-2 d-md-none">
-                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
-                            </form>
-                        </li>
-                        <li><a class="dropdown-item" href="#">Dolor</a></li>
-                        <li><a class="dropdown-item" href="#">Sit</a></li>
-                        <li><a class="dropdown-item" href="#">Amet</a></li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav d-lg-none">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Opciones
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Opción 1</a></li>
+                            <li><a class="dropdown-item" href="#">Opción 2</a></li>
+                            <li><a class="dropdown-item" href="#">Opción 3</a></li>
+                            <li><a class="dropdown-item" href="#">Link 4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto">
+                    <input class="form-control rounded-pill" type="search" placeholder="Buscar" aria-label="Buscar">
+                </form>
             </div>
         </div>
     </nav>
-
-    <!-- Offcanvas Menu (Menú deslizable desde la derecha) -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
         <div class="offcanvas-header">
             <h5 id="offcanvasMenuLabel">Opciones</h5>
@@ -65,11 +55,8 @@
             </ul>
         </div>
     </div>
-
-    <!-- Contenido principal -->
     <div class="container-lg mt-4">
         <div class="row">
-            <!-- Barra lateral (para pantallas LG y superiores) -->
             <div class="col-lg-3 d-none d-lg-block">
                 <div class="list-group">
                     <button type="button" class="list-group-item list-group-item-action">Opción 1</button>
@@ -78,27 +65,25 @@
                     <button type="button" class="list-group-item list-group-item-action">Opción 4</button>
                 </div>
             </div>
-
-            <!-- Contenido -->
             <div class="col-lg-9">
                 <h2 class="display-4 text-center text-md-start">Lorem ipsum...</h2>
                 <p id="carousel-text" class="highlight fs-4 fs-md-5">...vestibulum mollis, tortor ac congue commodo</p>
 
                 <div class="row">
                     <div class="col-lg-4">
-                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis et ante commodo, imperdiet neque ac, tempus felis. Nullam sed pharetra purus. Donec sit amet ultrices nisi.</p>
-                        <p class="fs-6 fs-md-5">Mauris mattis porttitor erat, in pharetra risus fringilla lobortis.</p>
-                        <p class="fs-6 fs-md-5">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste iusto nam distinctio ad laudantium vitae, quis, amet possimus dicta veritatis totam delectus quos architecto sunt repellendus consectetur rerum, ab sequi?</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa accusantium obcaecati, maiores labore quos soluta sunt, eius deserunt provident est ea. Obcaecati cum, inventore ducimus repellat reprehenderit molestias officia magni.</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse maxime aspernatur dolorum, quidem nulla sed explicabo quos eligendi molestias! Quos aspernatur iure ab enim placeat sequi dolores quasi optio quo?</p>
                     </div>
                     <div class="col-lg-4">
-                        <p class="fs-6 fs-md-5">Phasellus eleifend semper tempor. Vestibulum lobortis nulla vel odio laoreet, iaculis rhoncus neque porttitor.</p>
-                        <p class="fs-6 fs-md-5">In mi velit, fringilla sed velit vel, ornare varius dui.</p>
-                        <p class="fs-6 fs-md-5">Aliquet fringilla libero, quis dapibus massa tincidunt a.</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quod ex commodi ipsa facere velit voluptatum mollitia laudantium vero sed natus voluptates modi exercitationem necessitatibus maxime inventore odio, dolorem doloribus!</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus veniam pariatur placeat minima cum fugit totam quae nam iste corrupti, alias harum ut molestias, similique nesciunt aliquid atque eius debitis!</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium libero aliquam alias quos. Nemo, culpa hic vero vitae aliquam ullam exercitationem sint minima ea distinctio nesciunt minus sequi, ratione dolor.</p>
                     </div>
                     <div class="col-lg-4">
-                        <p class="fs-6 fs-md-5">Fusce vitae enim et tellus lacinia condimentum eu at massa.</p>
-                        <p class="fs-6 fs-md-5">Proin suscipit orci mi, ut hendrerit mi molestie nec.</p>
-                        <p class="fs-6 fs-md-5">Orci varius natoque penatibus et magnis dis parturient montes.</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore eius pariatur ipsam. Aut, voluptates. Voluptatem excepturi ipsa omnis consectetur aliquam quae saepe! A nihil quae corrupti illum optio aut distinctio?</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut exercitationem neque recusandae laboriosam, maxime eaque fugit incidunt facere ullam numquam consequuntur nam veritatis consectetur, eius commodi earum dolorum quia odio.</p>
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem reiciendis maiores at minima labore. Totam, odio? Voluptas ducimus doloremque similique nemo porro optio libero qui molestiae quidem. Commodi, est harum.</p>
                     </div>
                 </div>
             </div>
@@ -106,6 +91,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script> <!-- Enlace al archivo de JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
