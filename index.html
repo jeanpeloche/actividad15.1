@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 15.1!!</title>
+    <title>Ejemplo de Página con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"> <!-- Enlace a la hoja de estilos externa -->
 </head>
 <body>
-    
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LOREM IPSUM</a>
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Barra de búsqueda solo visible en pantallas grandes (a la izquierda) -->
+                <form class="d-none d-md-flex ms-auto">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                </form>
+                
+                <!-- Botones de navegación: solo visibles en pantallas grandes -->
+                <ul class="navbar-nav d-none d-md-flex">
+                    <li class="nav-item"><a class="nav-link active" href="#">Dolor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Amet</a></li>
+                </ul>
+                
+                <!-- Menú desplegable con opciones, que se activa en pantallas pequeñas -->
+                <div class="dropdown d-md-none">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Opciones
+                    </button>
+                    <ul class="dropdown-menu bg-light" aria-labelledby="dropdownMenuButton">
+                        <!-- Barra de búsqueda dentro del menú desplegable (solo en pantallas pequeñas) -->
+                        <li>
+                            <form class="px-3 py-2 d-md-none">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+                            </form>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Dolor</a></li>
+                        <li><a class="dropdown-item" href="#">Sit</a></li>
+                        <li><a class="dropdown-item" href="#">Amet</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Offcanvas Menu (Menú deslizable desde la derecha) -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasMenuLabel">Opciones</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="#">Opción 1</a></li>
+                <li class="list-group-item"><a href="#">Opción 2</a></li>
+                <li class="list-group-item"><a href="#">Opción 3</a></li>
+                <li class="list-group-item"><a href="#">Opción 4</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="container-lg mt-4">
+        <div class="row">
+            <!-- Barra lateral (para pantallas LG y superiores) -->
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="list-group">
+                    <button type="button" class="list-group-item list-group-item-action">Opción 1</button>
+                    <button type="button" class="list-group-item list-group-item-action">Opción 2</button>
+                    <button type="button" class="list-group-item list-group-item-action">Opción 3</button>
+                    <button type="button" class="list-group-item list-group-item-action">Opción 4</button>
+                </div>
+            </div>
+
+            <!-- Contenido -->
+            <div class="col-lg-9">
+                <h2 class="display-4 text-center text-md-start">Lorem ipsum...</h2>
+                <p id="carousel-text" class="highlight fs-4 fs-md-5">...vestibulum mollis, tortor ac congue commodo</p>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <p class="fs-6 fs-md-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis et ante commodo, imperdiet neque ac, tempus felis. Nullam sed pharetra purus. Donec sit amet ultrices nisi.</p>
+                        <p class="fs-6 fs-md-5">Mauris mattis porttitor erat, in pharetra risus fringilla lobortis.</p>
+                        <p class="fs-6 fs-md-5">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="fs-6 fs-md-5">Phasellus eleifend semper tempor. Vestibulum lobortis nulla vel odio laoreet, iaculis rhoncus neque porttitor.</p>
+                        <p class="fs-6 fs-md-5">In mi velit, fringilla sed velit vel, ornare varius dui.</p>
+                        <p class="fs-6 fs-md-5">Aliquet fringilla libero, quis dapibus massa tincidunt a.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p class="fs-6 fs-md-5">Fusce vitae enim et tellus lacinia condimentum eu at massa.</p>
+                        <p class="fs-6 fs-md-5">Proin suscipit orci mi, ut hendrerit mi molestie nec.</p>
+                        <p class="fs-6 fs-md-5">Orci varius natoque penatibus et magnis dis parturient montes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script> <!-- Enlace al archivo de JavaScript -->
 </body>
 </html>
